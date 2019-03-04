@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <title>Ajax Assignment</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <link rel="stylesheet" href="Style.css">
 
@@ -43,11 +44,10 @@ table.appendChild(tr);
 })
 
 document.body.appendChild(table);
+table.setAttribute("border","1")
 addEventsToColumns();
 }
 createTable();
-
-
 
 function addEventsToColumns() {
 var header = Object.keys(arr_of_obj[0]);
@@ -56,6 +56,7 @@ document.getElementById(header[index]).addEventListener('click',
 function (event) {
 console.log(event);
 sortTable(event.target.innerText)
+
 })
 })
 }
@@ -78,9 +79,10 @@ createTable();
 </head>
 
 <body>
-
-
+    <h2>Ajax Assignment</h2>
 </body>
+
+
 
 </html>
 
